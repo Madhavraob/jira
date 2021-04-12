@@ -4,6 +4,8 @@
      border: 2px solid red; 
      margin-right: 2px;
      height: 600px;
+    min-width: 0px;
+    overflow: hidden;
 }
 
 .card {
