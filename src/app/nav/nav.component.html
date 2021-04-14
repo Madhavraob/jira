@@ -1,13 +1,19 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" style="background-color: #00283B;">
     <!-- <mat-toolbar-row> -->
 
-    <mat-icon>apps</mat-icon>
-    <span>Jira Software</span>
+    <mat-icon style="margin-right: 1rem;">apps</mat-icon>
+    <span>Virtual P-Zone</span>
     <span class="menu-spacer"></span>
-    <a href="#" mat-button>Menu Item 1</a>
-    <a href="#" mat-button>Menu Item 2</a>
+    <!-- <a href="#" mat-button>People</a>
+    <a href="#" mat-button>Office</a> -->
 
-    <button mat-button [matMenuTriggerFor]="menu">Menu<mat-icon>expand_more</mat-icon></button>
+    <button mat-button [matMenuTriggerFor]="menu" style="font-size: large; margin-left: 1rem;">People<mat-icon>expand_more</mat-icon></button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="menu" style="font-size: large;" >Office<mat-icon>expand_more</mat-icon></button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item>Item 1</button>
         <button mat-menu-item>Item 2</button>
@@ -22,7 +28,9 @@
         <input floa matInput matAutosize="true" placeholder="Search">
     </mat-form-field>
     <!-- </div> -->
-    <a href="#" mat-button>Menu Item 6</a>
+    <mat-icon style="margin-left: 2rem;">help</mat-icon>
+    <mat-icon style="margin-left: 2rem;">settings</mat-icon>
+    <mat-icon style="margin-left: 2rem;">notifications</mat-icon>
 
 </mat-toolbar>
 

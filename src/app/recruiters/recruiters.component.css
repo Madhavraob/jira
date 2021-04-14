@@ -1,7 +1,7 @@
 .recruiter-list {
     /* border: 2px solid green; */
     margin-right: 8px;
-    height: 70vh;
+    height: max-content;
     min-width: 0px;
     overflow: hidden;
     background-color: #f3f1f1;
