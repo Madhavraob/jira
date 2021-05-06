@@ -18,6 +18,8 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatMenuModule } from '@angular/material/menu';
+import { VarComponent } from './var/var.component';
+import { VarStepComponent } from './var-step/var-step.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MatMenuModule } from '@angular/material/menu';
     HomeComponent,
     RecruitersComponent,
     InterviewsComponent,
-    NavComponent
+    NavComponent,
+    VarComponent,
+    VarStepComponent
   ],
   imports: [
     BrowserModule,
