@@ -1,0 +1,43 @@
+<div mat-dialog-title>
+  <mat-toolbar color="primary">
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+    <span>{{data.title}}</span>
+    <span class="example-spacer"></span>
+    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button> -->
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
+
+<mat-dialog-content class="mat-typography">
+
+  <h3>Develop across all platforms</h3>
+  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
+    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+
+  <h3>Develop across all platforms</h3>
+  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
+    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+
+  <h3>Develop across all platforms</h3>
+  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
+    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <mat-toolbar>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="primary" (click)="onSubmit()">
+      {{data.btnLabel}}
+    </button>
+    <button mat-raised-button mat-dialog-close>
+      Cancel
+    </button>
+  </mat-toolbar>
+</mat-dialog-actions>

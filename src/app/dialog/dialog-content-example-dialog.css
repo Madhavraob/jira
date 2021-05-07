@@ -1,0 +1,30 @@
+/* 
+.mat-dialog-container {
+    padding-top: 0 !important;
+}
+
+dialog-overview-example-dialog.ng-star-inserted > div {
+    margin-right: -24px;
+    margin-left: -24px;
+}
+ */
+
+ .example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-dialog-title {
+    margin-right: -24px !important;
+    margin-left: -24px !important;
+    margin-top: -24px;
+    /* padding: 0; */
+  /* margin: -24px -24px 0 -24px !important; */
+  /* padding: 24px; */
+}
+
+
+.mat-dialog-actions {
+    margin-right: -24px !important;
+    margin-left: -24px !important;
+    padding: 0;
+}

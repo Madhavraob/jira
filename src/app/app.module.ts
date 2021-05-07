@@ -20,6 +20,10 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatMenuModule } from '@angular/material/menu';
 import { VarComponent } from './var/var.component';
 import { VarStepComponent } from './var-step/var-step.component';
+import { DialogComponent, DialogContentExampleDialog } from './dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { DemoMaterialModule } from './mat.module';
 
 @NgModule({
   declarations: [
@@ -29,13 +33,16 @@ import { VarStepComponent } from './var-step/var-step.component';
     InterviewsComponent,
     NavComponent,
     VarComponent,
-    VarStepComponent
+    VarStepComponent,
+    DialogComponent,
+    DialogContentExampleDialog
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
     // material modules
+    // DemoMaterialModule,
     BrowserAnimationsModule,
     MatListModule,
     MatToolbarModule,
@@ -44,9 +51,12 @@ import { VarStepComponent } from './var-step/var-step.component';
     MatButtonModule,
     FlexLayoutModule,
     MatInputModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule,
+    OverlayModule
   ],
   providers: [],
+  entryComponents: [DialogComponent, DialogContentExampleDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
