@@ -44,7 +44,7 @@ export class DialogTemplateComponent {
   submitted = false;
   data: any;
 
-  constructor(private dialogRef: MatDialogRef<DialogTemplateComponent>
+  constructor(public dialogRef: MatDialogRef<DialogTemplateComponent>
     , @Inject(MAT_DIALOG_DATA) data) {
     this.data = data;
   }
