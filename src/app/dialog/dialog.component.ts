@@ -3,8 +3,8 @@ import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA, MatDialogRef } from '@angu
 
 @Component({
   selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css']
+  template: '',
+  styleUrls: ['dialog.component.css']
 })
 export class DialogComponent {
   @Output() dialogClose = new EventEmitter();
@@ -20,7 +20,8 @@ export class DialogComponent {
         title: this.title, btnLabel: this.btnLabel,
         contentHeader: this.contentHeader, contentBody: this.contentBody
       };
-
+      dialogConfig.panelClass = 'custom-modalbox';
+ 
       const dialogRef = this.dialog.open(DialogTemplateComponent, dialogConfig);
 
       dialogRef.afterClosed().subscribe(response => {
@@ -35,7 +36,7 @@ export class DialogComponent {
 
 @Component({
   selector: 'app-dialog-template',
-  templateUrl: 'app-dialog-template2.html',
+  templateUrl: 'app-dialog-template.html',
   styleUrls: ['app-dialog-template.css']
 })
 export class DialogTemplateComponent {

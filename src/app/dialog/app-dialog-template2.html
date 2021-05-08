@@ -1,8 +1,8 @@
-<mat-card class="example-card">
+<mat-card class="dialog-card">
 
   <mat-card-header [style.backgroundColor]="'blue'"  [ngClass]="{'custom-header':true}">
     <span>{{data.title}}</span>
-    <span class="example-spacer"></span>
+    <span class="dialog-spacer"></span>
     <button mat-icon-button mat-dialog-close>
       <mat-icon class="white-icon">close</mat-icon>
     </button>
@@ -16,8 +16,8 @@
     </p>
   </mat-card-content>
 
-  <mat-card-actions class="example-card">
-    <span class="example-spacer"></span>
+  <mat-card-actions class="dialog-card">
+    <span class="dialog-spacer"></span>
     <button mat-raised-button color="primary" (click)="onSubmit()">
       {{data.btnLabel}}
     </button>
