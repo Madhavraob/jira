@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Output, Input, EventEmitter } from '@angular/core';
 import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -7,41 +7,53 @@ import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA, MatDialogRef } from '@angu
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent {
+  @Output() dialogClose = new EventEmitter();
 
-  constructor(public dialog: MatDialog) { }
+  @Input() title: string;
+  @Input() contentHeader: string;
+  @Input() contentBody: string;
+  @Input() btnLabel: string;
+  @Input() set openDialog(open: boolean) {
+    if (open) {
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.data = {
+        title: this.title, btnLabel: this.btnLabel,
+        contentHeader: this.contentHeader, contentBody: this.contentBody
+      };
 
-  openDialog() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.data = { title: 'Delete Request(s)', btnLabel: 'Delete' };
+      const dialogRef = this.dialog.open(DialogTemplateComponent, dialogConfig);
 
-    const dialogRef = this.dialog.open(DialogContentExampleDialog, dialogConfig);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+      dialogRef.afterClosed().subscribe(response => {
+        this.dialogClose.emit(response)
+      });
+    }
   }
 
+  constructor(public dialog: MatDialog) { }
 }
 
-@Component({
-  selector: 'dialog-content-example-dialog',
-  templateUrl: 'dialog-content-example-dialog.html',
-  styleUrls: ['dialog-content-example-dialog.css']
-})
-export class DialogContentExampleDialog {
 
+@Component({
+  selector: 'app-dialog-template',
+  templateUrl: 'app-dialog-template2.html',
+  styleUrls: ['app-dialog-template.css']
+})
+export class DialogTemplateComponent {
+
+  submitted = false;
   data: any;
 
-  constructor(private dialogRef: MatDialogRef<DialogContentExampleDialog>, @Inject(MAT_DIALOG_DATA) data) {
+  constructor(private dialogRef: MatDialogRef<DialogTemplateComponent>
+    , @Inject(MAT_DIALOG_DATA) data) {
     this.data = data;
   }
 
   onSubmit() {
-    this.dialogRef.close('submit clicked');
+    this.submitted = true;
+    this.dialogRef.close(this.submitted);
   }
 
-  close() {
-    this.dialogRef.close();
+  onCancel() {
+    this.dialogRef.close(this.submitted);
   }
-
 }

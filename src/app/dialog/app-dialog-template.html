@@ -1,17 +1,11 @@
 <div mat-dialog-title>
-  <mat-toolbar color="primary">
-    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button> -->
+  <!-- <mat-toolbar color="primary"> -->
     <span>{{data.title}}</span>
     <span class="example-spacer"></span>
-    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button> -->
     <button mat-icon-button mat-dialog-close>
-      <mat-icon>close</mat-icon>
+      <mat-icon class="white-icon">close</mat-icon>
     </button>
-  </mat-toolbar>
+  <!-- </mat-toolbar> -->
 </div>
 
 <mat-dialog-content class="mat-typography">
@@ -31,7 +25,7 @@
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <mat-toolbar>
+  <!-- <mat-toolbar> -->
     <span class="example-spacer"></span>
     <button mat-raised-button color="primary" (click)="onSubmit()">
       {{data.btnLabel}}
@@ -39,5 +33,5 @@
     <button mat-raised-button mat-dialog-close>
       Cancel
     </button>
-  </mat-toolbar>
+  <!-- </mat-toolbar> -->
 </mat-dialog-actions>

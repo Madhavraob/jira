@@ -8,7 +8,12 @@
 <p><button mat-button>Header</button></p>
 <mat-sidenav-container class="recruiter-list">
     <mat-sidenav-content>
-        <app-dialog></app-dialog>
+        <app-dialog title='title' btnLabel='btnLabel' contentHeader='contentHeader' contentBody='contentBody'
+            [openDialog]="openDialog" (dialogClose)="dialogClose($event)">
+        </app-dialog>
+        <p>
+            <button (click)="openDialog = !openDialog">toggle dialog</button>
+        </p>
         <p>
             <a [routerLink]="['/var']" [queryParams]="{details: true}">true details</a>
         </p>

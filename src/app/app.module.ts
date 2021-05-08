@@ -9,19 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecruitersComponent } from './recruiters/recruiters.component';
 import { InterviewsComponent } from './interviews/interviews.component';
 import { NavComponent } from './nav/nav.component';
-
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatIconModule } from "@angular/material/icon";
-import { MatListModule } from "@angular/material/list";
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatButtonModule } from "@angular/material/button";
-import { MatInputModule } from "@angular/material/input";
-import { FlexLayoutModule } from "@angular/flex-layout";
-import { MatMenuModule } from '@angular/material/menu';
 import { VarComponent } from './var/var.component';
 import { VarStepComponent } from './var-step/var-step.component';
-import { DialogComponent, DialogContentExampleDialog } from './dialog/dialog.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent, DialogTemplateComponent } from './dialog/dialog.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { DemoMaterialModule } from './mat.module';
 
@@ -35,28 +25,18 @@ import { DemoMaterialModule } from './mat.module';
     VarComponent,
     VarStepComponent,
     DialogComponent,
-    DialogContentExampleDialog
+    DialogTemplateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
     // material modules
-    // DemoMaterialModule,
+    DemoMaterialModule,
     BrowserAnimationsModule,
-    MatListModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    MatInputModule,
-    MatMenuModule,
-    MatDialogModule,
     OverlayModule
   ],
   providers: [],
-  entryComponents: [DialogComponent, DialogContentExampleDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
