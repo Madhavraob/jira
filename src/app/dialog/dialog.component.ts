@@ -22,14 +22,15 @@ export class DialogComponent {
       };
       dialogConfig.panelClass = 'custom-modalbox';
  
-      const dialogRef = this.dialog.open(DialogTemplateComponent, dialogConfig);
+      this.dialogRef = this.dialog.open(DialogTemplateComponent, dialogConfig);
 
-      dialogRef.afterClosed().subscribe(response => {
+      this.dialogRef.afterClosed().subscribe(response => {
         this.dialogClose.emit(response)
       });
     }
   }
 
+  dialogRef;
   constructor(public dialog: MatDialog) { }
 }
 
