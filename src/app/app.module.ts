@@ -14,6 +14,7 @@ import { VarStepComponent } from './var-step/var-step.component';
 import { DialogComponent, DialogTemplateComponent } from './dialog/dialog.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { DemoMaterialModule } from './mat.module';
+import { CharanModule } from './charan/charan.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { DemoMaterialModule } from './mat.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    CharanModule,
     // material modules
     DemoMaterialModule,
     BrowserAnimationsModule,

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-ang-ms',
   templateUrl: './ang-ms.component.html',
-  styleUrls: ['./ang-ms.component.css']
+  styleUrls: ['./ang-ms.component.scss']
 })
 export class AngMsComponent implements OnInit {
   dropdownList = [];

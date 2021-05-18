@@ -4,7 +4,7 @@ import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA, MatDialogRef } from '@angu
 @Component({
   selector: 'app-dialog',
   template: '',
-  styleUrls: ['dialog.component.css']
+  styleUrls: ['dialog.component.scss']
 })
 export class DialogComponent {
   @Output() dialogClose = new EventEmitter();
@@ -38,7 +38,7 @@ export class DialogComponent {
 @Component({
   selector: 'app-dialog-template',
   templateUrl: 'app-dialog-template.html',
-  styleUrls: ['app-dialog-template.css']
+  styleUrls: ['app-dialog-template.scss']
 })
 export class DialogTemplateComponent {
 

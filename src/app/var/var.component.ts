@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-var',
   templateUrl: './var.component.html',
-  styleUrls: ['./var.component.css']
+  styleUrls: ['./var.component.scss']
 })
 export class VarComponent implements OnInit {
 
