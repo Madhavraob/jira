@@ -22,3 +22,4 @@ export class CharanModule { }
 // https://stackblitz.com/edit/ngx-graph-simple-example-1haxo3?file=package.json
 // https://stackblitz.com/edit/ngx-graph-demo?file=src%2Fapp%2Fapp.component.html
 // https://stackblitz.com/edit/ngx-graph-simple-example-1haxo3
+// https://stackblitz.com/edit/ngx-graph-simple-example-ek7ebt?file=app%2Favatar%2Favatar.component.html
