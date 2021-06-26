@@ -15,6 +15,16 @@ import { DialogComponent, DialogTemplateComponent } from './dialog/dialog.compon
 import { OverlayModule } from '@angular/cdk/overlay';
 import { DemoMaterialModule } from './mat.module';
 import { CharanModule } from './charan/charan.module';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TransComponent } from './trans/trans.component';
+import { AccessibilityComponent } from './accessibility/accessibility.component';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 
 @NgModule({
   declarations: [
@@ -26,16 +36,26 @@ import { CharanModule } from './charan/charan.module';
     VarComponent,
     VarStepComponent,
     DialogComponent,
-    DialogTemplateComponent
+    DialogTemplateComponent,
+    TransComponent,
+    AccessibilityComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CharanModule,
+    HttpClientModule,
     // material modules
     DemoMaterialModule,
     BrowserAnimationsModule,
-    OverlayModule
+    OverlayModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,7 @@
+{
+    "HOME": {
+      "TITLE": "Hello {{name}} with ngx-translate!",
+      "SELECT": "Change language"
+    }
+  }
+  
