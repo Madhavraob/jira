@@ -28,6 +28,7 @@
     "@swimlane/ngx-graph": "^7.2.0",
     "angular4-multiselect-dropdown": "^2.0.0",
     "d3-shape": "^2.1.0",
+    "ngx-drag-scroll": "^12.0.0-beta.1",
     "ngx-graph": "^0.9.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

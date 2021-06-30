@@ -20,6 +20,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TransComponent } from './trans/trans.component';
 import { AccessibilityComponent } from './accessibility/accessibility.component';
+import { DragScrollComponent } from './drag-scroll/drag-scroll.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -38,7 +39,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DialogComponent,
     DialogTemplateComponent,
     TransComponent,
-    AccessibilityComponent
+    AccessibilityComponent,
+    DragScrollComponent
   ],
   imports: [
     BrowserModule,
