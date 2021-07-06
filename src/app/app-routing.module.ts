@@ -7,12 +7,14 @@ import { NewsResolver } from './news.resolver';
 import { VarStepComponent } from './var-step/var-step.component';
 import { CharanComponent } from './charan/charan/charan.component';
 import { TransComponent } from './trans/trans.component';
+import { CharanAccessComponent } from './charan-access/charan-access.component';
 
 const routes: Routes = [
   { path: 'var', component: VarComponent, resolve: { message: NewsResolver } },
   { path: 'var-step', component: VarStepComponent },
   { path: 'charan', component: CharanComponent },
   { path: 'trans', component: TransComponent },
+  { path: 'access', component: CharanAccessComponent },
   { path: '', component: HomeComponent }
 ]
 

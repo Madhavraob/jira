@@ -21,6 +21,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TransComponent } from './trans/trans.component';
 import { AccessibilityComponent } from './accessibility/accessibility.component';
 import { DragScrollComponent } from './drag-scroll/drag-scroll.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { CharanAccessComponent } from './charan-access/charan-access.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AvatarComponent } from './avatar/avatar.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -40,12 +44,17 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DialogTemplateComponent,
     TransComponent,
     AccessibilityComponent,
-    DragScrollComponent
+    DragScrollComponent,
+    CharanAccessComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     CharanModule,
+    DragScrollModule,
     HttpClientModule,
     // material modules
     DemoMaterialModule,
