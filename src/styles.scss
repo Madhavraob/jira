@@ -87,3 +87,13 @@ body {
 .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
   color: red;
 }
+
+// change mat select arrow icon
+// https://newbedev.com/change-mat-select-arrow-icon
+// .mat-select-arrow {
+//   border-left: 15px solid transparent !important;
+//   border-right: none !important;
+//   border-top: 15px solid transparent !important;
+//   border-image-source: url('my img url') !important;
+//   border-image-repeat: stretch !important;
+// }

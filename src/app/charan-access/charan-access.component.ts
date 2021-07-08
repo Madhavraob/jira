@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { of } from 'rxjs';
 
@@ -13,6 +13,7 @@ export class CharanAccessComponent implements OnInit {
   teams = [{ name: '1' }, { name: '2' }];
   profile = { email: '' };
   officeControl = new FormControl();
+  focusAvatar = false;
 
   constructor() { }
 
@@ -33,6 +34,14 @@ export class CharanAccessComponent implements OnInit {
 
   logout() {
 
+  }
+
+  resetFocus() {
+    this.focusAvatar = false;
+  }
+
+  setFocus() {
+    this.focusAvatar = true;
   }
 
 }

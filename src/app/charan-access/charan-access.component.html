@@ -1,35 +1,44 @@
 <mat-toolbar color="primary" class="toolbar">
-    <span style="display: flex;">
-      <div class="select">
-        <label for="officeInput" class="select_lable_one">Office:</label>
-        <mat-form-field floatLabel="never" class="button_one">
-          <input type="text" matInput [formControl]="officeControl" [matAutocomplete]="auto" placeholder="Start Typing..." id="officeInput">
-          <mat-autocomplete (optionSelected)="officeChange($event)" #auto="matAutocomplete" [displayWith]="displayFn">
-            <mat-option tabindex="0" *ngFor="let office of officeOptions | async" [value]="office">
-              {{ office.name }}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-      </div>
-  
-      <div class="select">
-        <label class="select_lable_two" for="teamSelect">Teams:</label>
-        <mat-form-field floatLabel="never" class="button_two" id="teamSelect">
-          <mat-select placeholder="Select Team">
-            <mat-option (onSelectionChange)="teamChange($event)"  *ngFor="let team of teams" [value]='team'>Team {{team.name}}</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-    </span>
-    <span class="logo">
-      <img alt="App Logo" class="image" src="assets/IG_Logo_Primary_White_RGB.svg">
-      <label class="label"> | PZone</label>
-    </span>
-    <span>
-      <app-avatar [matMenuTriggerFor]="menu" #menuTrigger></app-avatar>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="logout()">Sign out</button>
-      </mat-menu>
-    </span>
-  
-  </mat-toolbar>
+  <span style="display: flex;">
+    <div class="select">
+      <label for="officeInput" class="select_lable_one">Office:</label>
+      <mat-form-field floatLabel="never" class="button_one">
+        <input type="text" matInput [formControl]="officeControl" [matAutocomplete]="auto" placeholder="Start Typing..."
+          id="officeInput">
+        <mat-autocomplete (optionSelected)="officeChange($event)" #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option tabindex="0" *ngFor="let office of officeOptions | async" [value]="office">
+            {{ office.name }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+
+    <div class="select">
+      <label class="select_lable_two" for="teamSelect">Teams:</label>
+      <mat-form-field floatLabel="never" class="button_two" id="teamSelect">
+        <mat-select placeholder="Select Team" aria-label="select teams">
+          <mat-option (onSelectionChange)="teamChange($event)" *ngFor="let team of teams" [value]='team'>Team
+            {{team.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </span>
+  <span class="logo">
+    <!-- <img alt="App Logo" class="image" src="assets/IG_Logo_Primary_White_RGB.svg"> -->
+    <!-- <label class="label"> | PZone</label> -->
+    <h1> | PZone</h1>
+  </span>
+  <span>
+    <app-avatar [setFocus]="focusAvatar" [matMenuTriggerFor]="menu" #menuTrigger (menuOpened)="resetFocus()"></app-avatar>
+    <mat-menu #menu="matMenu" (closed)="setFocus()">
+      <button mat-menu-item (click)="logout()">Sign out</button>
+    </mat-menu>
+  </span>
+
+</mat-toolbar>
+
+<!-- <some-element [ngClass]="'first second'">...</some-element>
+<some-element [ngClass]="['first', 'second']">...</some-element>
+<some-element [ngClass]="{'first': true, 'second': true, 'third': false}">...</some-element>
+<some-element [ngClass]="stringExp|arrayExp|objExp">...</some-element>
+<some-element [ngClass]="{'class1 class2 class3' : true}">...</some-element> -->
