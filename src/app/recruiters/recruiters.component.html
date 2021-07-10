@@ -18,7 +18,8 @@
             <a [routerLink]="['/var']" [queryParams]="{details: true}">true details</a>
         </p>
         <p>
-            <a [routerLink]="['/var']" [queryParams]="{details: false}">false details</a>
+            <!-- {{ currentDate | dateFormat }} -->
+            {{ currentDate | dateFormat }}
         </p>
         <p><button mat-button>Recruiter</button></p>
         <p><button mat-button>Recruiter</button></p>

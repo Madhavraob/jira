@@ -25,6 +25,8 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 import { CharanAccessComponent } from './charan-access/charan-access.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AvatarComponent } from './avatar/avatar.component';
+import { DateFormatPipe } from './date-format.pipe';
+import { AppService } from './app.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -46,7 +48,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AccessibilityComponent,
     DragScrollComponent,
     CharanAccessComponent,
-    AvatarComponent
+    AvatarComponent,
+    DateFormatPipe
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

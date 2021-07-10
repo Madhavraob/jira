@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class RecruitersComponent implements OnInit {
 
   openDialog: boolean = false;
+  currentDate = new Date();
+  currentDate2;
+  dateFormat = "dd MMM yyyy";
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   dialogClose(event) {
     this.openDialog = false;
