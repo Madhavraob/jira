@@ -29,9 +29,12 @@
     <h1> | PZone</h1>
   </span>
   <span>
+    <!-- restoreFocus="true" -->
     <app-avatar [setFocus]="focusAvatar" [matMenuTriggerFor]="menu" #menuTrigger (menuOpened)="resetFocus()"></app-avatar>
     <mat-menu #menu="matMenu" (closed)="setFocus()">
-      <button mat-menu-item (click)="logout()">Sign out</button>
+      <span mat-menu-item>
+        <button mat-button (click)="logout()" #signOut="matButton">Sign out</button>
+      </span>
     </mat-menu>
   </span>
 

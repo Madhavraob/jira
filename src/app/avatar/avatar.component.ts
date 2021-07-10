@@ -8,9 +8,11 @@ import { MatButton } from '@angular/material/button';
 })
 export class AvatarComponent implements OnInit {
 
-  @ViewChild('btnRef') buttonRef: MatButton;
+  @ViewChild('buttonRef') buttonRef: MatButton;
   @Input() set setFocus(focus: boolean) {
-    this.buttonRef.focus();
+    if(focus) {
+      this.buttonRef.focus();
+    }
   }
 
   // @ViewChild('firstname', {static: true}) firstname:any;

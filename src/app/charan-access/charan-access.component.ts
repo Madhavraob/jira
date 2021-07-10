@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { of } from 'rxjs';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-charan-access',
@@ -14,6 +15,7 @@ export class CharanAccessComponent implements OnInit {
   profile = { email: '' };
   officeControl = new FormControl();
   focusAvatar = false;
+  @ViewChild('signOut') buttonRef: MatButton;
 
   constructor() { }
 
@@ -38,6 +40,7 @@ export class CharanAccessComponent implements OnInit {
 
   resetFocus() {
     this.focusAvatar = false;
+    this.buttonRef.focus();
   }
 
   setFocus() {
