@@ -11,7 +11,6 @@ export class DateFormatPipe implements PipeTransform {
 
   transform(value: any, ...args: unknown[]): unknown {
     // return value;
-    debugger
     return formatDate(value, this.appService.dateFormat, 'en-US');
     // return null;
   }

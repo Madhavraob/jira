@@ -19,8 +19,7 @@ export class CharanAccessComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() { }
 
   officeChange($event) {
 
