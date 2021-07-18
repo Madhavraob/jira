@@ -1,0 +1,31 @@
+<button mat-button (click)="openDialog()">Open</button>
+
+<ng-template #dialogRef2 let-data>
+
+    <div style="display: flex; height: 100%;">
+
+        <div tabindex="0" style="width: 300px;border-right: 2px solid red;">{{data}}</div>
+
+        <div style="width: 240px; background: greenyellow;">
+            <div style="display: flex; justify-content: space-between;">
+                <div tabindex="0">second title</div>
+                <mat-icon aria-hidden="false" tabindex="0" aria-label="Example home icon">close</mat-icon>
+            </div>
+            <div style="display: flex">
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+                <div>content data</div>
+            </div>
+        </div>
+
+    </div>
+</ng-template>

@@ -16,8 +16,9 @@ export class AppComponent {
     [17, 18, 19, 20]
   ];
 
-  ngOnInit() {
-    debugger
+  ngOnInit() { }
+
+  diagArr() {
 
     // const maxRi = this.m.length - 1;
     // const maxCi = this.m[0].length - 1;
@@ -46,7 +47,7 @@ export class AppComponent {
     const diagArray = [];
 
     for (let line = 1; line <= diagCount; line++) {
-      const startRow = this.min(rowCount, line) - 1;
+      const startRow = this.min(line, rowCount) - 1;
       let startCol = this.max(0, line - rowCount);
 
       let count = this.min(this.min(line, (colCount - startCol)), rowCount);
@@ -57,9 +58,9 @@ export class AppComponent {
       }
 
       if (line % 2) {
-        diagArray.push(rowArr);
+        diagArray.push(...rowArr);
       } else {
-        diagArray.push(rowArr.reverse());
+        diagArray.push(...rowArr.reverse());
       }
     }
     console.log(diagArray);

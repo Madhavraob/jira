@@ -97,3 +97,14 @@ body {
 //   border-image-source: url('my img url') !important;
 //   border-image-repeat: stretch !important;
 // }
+
+
+.my-class .mat-dialog-container{
+  background: lightcyan;
+  color: #039be5;
+  height: 440px;
+  width: 543px;
+  padding: 16px;
+  align-items: center !important;
+  justify-content: center !important;
+}

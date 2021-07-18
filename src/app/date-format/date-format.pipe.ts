@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { formatDate } from "@angular/common";
-import { AppService } from './app.service';
+import { AppService } from '../app.service';
 
 @Pipe({
   name: 'dateFormat'

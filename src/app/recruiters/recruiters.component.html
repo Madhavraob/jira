@@ -18,10 +18,16 @@
             <a [routerLink]="['/var']" [queryParams]="{details: true}">true details</a>
         </p>
         <p>
-            <!-- {{ currentDate | dateFormat }} -->
             {{ currentDate | dateFormat }}
         </p>
-        <p><button mat-button>Recruiter</button></p>
+        <p>
+            dateDiff -> {{ currentDate | dateDiff }}
+        </p>
+        <p>
+            <button mat-button>
+                <app-template-dialog></app-template-dialog>
+            </button>
+        </p>
         <p><button mat-button>Recruiter</button></p>
         <p><button mat-button>Recruiter</button></p>
         <p><button mat-button>Recruiter</button></p>
