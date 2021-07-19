@@ -46,4 +46,36 @@ export class CharanAccessComponent implements OnInit {
     this.focusAvatar = true;
   }
 
+  customSort() {
+    let data = [
+      { status: 'done', age: 50 },
+      { status: 'todo', age: 50 },
+      { status: 'inprogress', age: 50 },
+      { status: 'todo', age: 51 },
+      { status: 'done', age: 50 },
+      { status: 'todo', age: 50 }
+    ]
+    let so = [
+      'todo',
+      'inprogress',
+      'done'
+    ]
+
+    data.sort(function (x, y) {
+      if (so.indexOf(x.status) < so.indexOf(y.status)) {
+        return -1;
+      } else if (so.indexOf(x.status) > so.indexOf(y.status)) {
+        return 1;
+      } else {
+        if (x.age < y.age) {
+          return -1;
+        } else if (x.age > y.age) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }
+    });
+  }
+
 }
