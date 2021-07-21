@@ -13,6 +13,6 @@ export class TemplateDialogComponent {
   constructor(private dialog: MatDialog) { }
 
   openDialog(): void {
-    this.dialog.open(this.dialogRef, { data: "some data", panelClass: 'my-class' });
+    this.dialog.open(this.dialogRef, { data: "some data", panelClass: 'my-class', ariaLabel:"dialog1Desc" });
   }
 }

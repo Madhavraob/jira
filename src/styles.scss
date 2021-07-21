@@ -73,7 +73,12 @@ body {
 
 .mat-button.mat-focused, .mat-button:focus {
   // background-color: red;
-  border-bottom: 2px solid red;
+  border: 2px solid red;
+}
+
+// .mat-icon-button, 
+.mat-icon-button:focus {
+  border: 2px solid red;
 }
 
 .mat-form-field.mat-focused .mat-form-field-ripple {
