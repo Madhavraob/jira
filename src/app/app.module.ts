@@ -29,6 +29,7 @@ import { DateFormatPipe } from './date-format/date-format.pipe';
 import { AppService } from './app.service';
 import { TemplateDialogComponent } from './template-dialog/template-dialog.component';
 import { DateDiffPipe } from './date-diff/date-diff.pipe';
+import { FormFieldComponent } from './form-field/form-field.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -53,7 +54,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AvatarComponent,
     DateFormatPipe,
     TemplateDialogComponent,
-    DateDiffPipe
+    DateDiffPipe,
+    FormFieldComponent
   ],
   imports: [
     BrowserModule,

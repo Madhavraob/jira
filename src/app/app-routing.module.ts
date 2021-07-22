@@ -8,6 +8,7 @@ import { VarStepComponent } from './var-step/var-step.component';
 import { CharanComponent } from './charan/charan/charan.component';
 import { TransComponent } from './trans/trans.component';
 import { CharanAccessComponent } from './charan-access/charan-access.component';
+import { FormFieldComponent } from './form-field/form-field.component';
 
 const routes: Routes = [
   { path: 'var', component: VarComponent, resolve: { message: NewsResolver } },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'charan', component: CharanComponent },
   { path: 'trans', component: TransComponent },
   { path: 'access', component: CharanAccessComponent },
+  { path: 'form', component: FormFieldComponent },
   { path: '', component: HomeComponent }
 ]
 
