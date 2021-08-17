@@ -1,28 +1,29 @@
-<div mat-dialog-title class="custom-header">
+<div mat-dialog aria-modal="true">
+  <div mat-dialog-title aria-modal="true" class="custom-header">
     <span cdkFocusInitial>{{data.title}}</span>
     <span class="dialog-spacer"></span>
     <!-- <button mat-icon-button mat-dialog-close> -->
-      <mat-icon mat-dialog-close class="white-icon">close</mat-icon>
+    <mat-icon mat-dialog-close tabindex="0" class="white-icon" (keydown.enter)="onCancel()">close</mat-icon>
     <!-- </button> -->
-</div>
+  </div>
 
-<div mat-dialog-content class="mat-typography custom-content">
+  <div mat-dialog-content aria-modal="true" class="mat-typography custom-content">
 
-  <h3>Develop across all platforms</h3>
-  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
-    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+    <h3>Develop across all platforms</h3>
+    <p>Learn one way to build applications with Angular and reuse your code and abilities to build
+      apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
 
-  <h3>Develop across all platforms</h3>
-  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
-    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+    <h3>Develop across all platforms</h3>
+    <p>Learn one way to build applications with Angular and reuse your code and abilities to build
+      apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
 
-  <h3>Develop across all platforms</h3>
-  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
-    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+    <h3>Develop across all platforms</h3>
+    <p>Learn one way to build applications with Angular and reuse your code and abilities to build
+      apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
 
   </div>
 
-<div mat-dialog-actions class="custom-footer">
+  <div aria-modal="true" mat-dialog-actions class="custom-footer">
     <span class="dialog-spacer"></span>
     <button mat-raised-button color="primary" (click)="onSubmit()">
       {{data.btnLabel}}
@@ -31,3 +32,4 @@
       Cancel
     </button>
   </div>
+</div>
