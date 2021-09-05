@@ -1,0 +1,35 @@
+<div style="display: flex;">
+    <div class="pull-left mt-sm" (click)="scrollLeft()" [ngClass]="leftDisabled ? 'visibility':''">
+        left
+    </div>
+    <div class="scroll" #scrollMenu (scroll)="onScroll($event)"
+        [ngClass]="rightDisabled ? 'width':leftDisabled?'width':''">
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+    </div>
+    <div class="pull-right" (click)="scrollRight()" [ngClass]="rightDisabled ? 'visibility':''">
+        right
+    </div>
+</div>

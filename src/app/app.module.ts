@@ -30,6 +30,8 @@ import { AppService } from './app.service';
 import { TemplateDialogComponent } from './template-dialog/template-dialog.component';
 import { DateDiffPipe } from './date-diff/date-diff.pipe';
 import { FormFieldComponent } from './form-field/form-field.component';
+import { NativeScrollComponent } from './native-scroll/native-scroll.component';
+import { NativeScroll2Component } from './native-scroll2/native-scroll2.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -55,7 +57,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DateFormatPipe,
     TemplateDialogComponent,
     DateDiffPipe,
-    FormFieldComponent
+    FormFieldComponent,
+    NativeScrollComponent,
+    NativeScroll2Component
   ],
   imports: [
     BrowserModule,

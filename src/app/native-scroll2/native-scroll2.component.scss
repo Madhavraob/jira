@@ -1,0 +1,31 @@
+.scroll {
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+    width: 70%;
+}
+
+.pull-right{
+    background: grey;
+    display: flex;
+    align-items: center;
+    width: 10%;
+    justify-content: space-around;
+}
+
+.visibility{
+    display: none !important;
+
+}
+
+.pull-left{
+    background: grey;
+    display: flex;
+    align-items: center;
+    width: 10%;
+    justify-content: space-around;
+}
+
+.width{
+    width:90% !important;
+}
