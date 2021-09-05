@@ -9,7 +9,7 @@ import { CharanComponent } from './charan/charan/charan.component';
 import { TransComponent } from './trans/trans.component';
 import { CharanAccessComponent } from './charan-access/charan-access.component';
 import { FormFieldComponent } from './form-field/form-field.component';
-import { NativeScrollComponent } from './native-scroll/native-scroll.component';
+import { NativeScroll2Component } from './native-scroll2/native-scroll2.component';
 
 const routes: Routes = [
   { path: 'var', component: VarComponent, resolve: { message: NewsResolver } },
@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'trans', component: TransComponent },
   { path: 'access', component: CharanAccessComponent },
   { path: 'form', component: FormFieldComponent },
-  { path: 'nat-scroll', component: NativeScrollComponent },
+  { path: 'nat-scroll', component: NativeScroll2Component },
   { path: '', component: HomeComponent }
 ]
 

@@ -1,35 +1,35 @@
-<div style="display: flex;">
-    <div class="pull-left mt-sm" (click)="scrollLeft()" [ngClass]="leftDisabled ? 'visibility':''">
+<div style="display: flex; padding: 100px;">
+    <button class="pull-left mt-sm" (click)="scrollLeft()" [ngClass]="leftDisabled ? 'visibility':''">
         left
-    </div>
+    </button>
     <div class="scroll" #scrollMenu (scroll)="onScroll($event)"
         [ngClass]="rightDisabled ? 'width':leftDisabled?'width':''">
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
-        <div style="border-left: 100px solid green; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
+        <div style="border: 2px solid green; margin-left: 40px;background: greenyellow; "> hiiiiiiiiiiiiiii </div>
     </div>
-    <div class="pull-right" (click)="scrollRight()" [ngClass]="rightDisabled ? 'visibility':''">
+    <button class="pull-right" (click)="scrollRight()" [ngClass]="rightDisabled ? 'visibility':''">
         right
-    </div>
+    </button>
 </div>
