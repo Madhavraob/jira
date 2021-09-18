@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { of, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,9 @@ export class AppService {
     } else if (this.language == 'fr-CA') {
       this.dateFormat = "dd/MM/yyyy";
     }
+  }
+
+  getBooks(): Observable<any> {
+    return of(['a', 'b', 'c']);
   }
 }

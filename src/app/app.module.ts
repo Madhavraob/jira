@@ -32,6 +32,10 @@ import { DateDiffPipe } from './date-diff/date-diff.pipe';
 import { FormFieldComponent } from './form-field/form-field.component';
 import { NativeScrollComponent } from './native-scroll/native-scroll.component';
 import { NativeScroll2Component } from './native-scroll2/native-scroll2.component';
+import { EffectsModule } from '@ngrx/effects';
+import { NavEffects } from './store/nav.effects';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './store/reducers';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -79,7 +83,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    EffectsModule.forRoot([NavEffects]),
+    StoreModule.forRoot(reducers, { metaReducers })
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
