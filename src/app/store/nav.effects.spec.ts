@@ -18,7 +18,7 @@ fdescribe('NavEffects', () => {
       providers: [
         NavEffects,
         provideMockActions(() => actions$),
-        { provide: AppService, useValue: { getMockList: () => of(['1', '2']) } }
+        { provide: AppService, useValue: { getBooks: () => of(['1', '2']) } }
       ]
     });
 
