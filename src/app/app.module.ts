@@ -36,6 +36,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { NavEffects } from './store/nav.effects';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store/reducers';
+import { StepperComponent } from './stepper/stepper.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -63,7 +64,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DateDiffPipe,
     FormFieldComponent,
     NativeScrollComponent,
-    NativeScroll2Component
+    NativeScroll2Component,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
