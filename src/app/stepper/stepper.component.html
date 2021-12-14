@@ -3,7 +3,7 @@
 </button>
 
 <mat-horizontal-stepper linear #stepper>
-    <mat-step  [completed]="true">
+    <mat-step [completed]="step1Completed">
         <form [formGroup]="zeroFormGroup">
             <ng-template matStepLabel>Fill out your name</ng-template>
             <mat-form-field>
@@ -12,7 +12,7 @@
             </mat-form-field>
             <div>
                 <button mat-button matStepperNext>Next</button>
-            </div> 
+            </div>
         </form>
     </mat-step>
     <mat-step [stepControl]="firstFormGroup">
@@ -53,10 +53,12 @@
         </div>
     </mat-step>
     <ng-template matStepperIcon="edit" let-index="index">
-        <span class="number" [ngClass]="{'number-pending': isNormal(index), 'number-complete': !isNormal(index)}">{{ index + 1 }}</span>
+        <span class="number"
+            [ngClass]="{'number-pending': isNormal(index), 'number-complete': !isNormal(index)}">{{ index + 1 }}</span>
     </ng-template>
     <ng-template matStepperIcon="number" let-index="index">
-            <span class="number" [ngClass]="{'number-pending': isNormal(index), 'number-complete': !isNormal(index)}">{{ index + 1 + 44 }}</span>
+        <span class="number"
+            [ngClass]="{'number-pending': isNormal(index), 'number-complete': !isNormal(index)}">{{ index + 1 + 44 }}</span>
     </ng-template>
     <!-- Icon overrides. -->
     <!-- <ng-template matStepperIcon="done" let-index="index">

@@ -12,6 +12,7 @@ export class StepperComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   isEditable = true;
+  step1Completed = false;
   @ViewChild('stepper') stepper: MatHorizontalStepper;
 
   constructor(private _formBuilder: FormBuilder) { }

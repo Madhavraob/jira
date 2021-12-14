@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecruitersComponent implements OnInit {
 
+  showNav = false;
   openDialog: boolean = false;
   currentDate = new Date();
   currentDate2;

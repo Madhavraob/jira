@@ -1,11 +1,4 @@
-<!-- <div class="recruiter-list">
-    <div>r1</div>
-    <div>r2</div>
-    <div>r3</div>
-    <div>r3</div>
-</div> -->
-
-<p><button mat-button>Header</button></p>
+<!-- <p><button mat-button>Header</button></p>
 <mat-sidenav-container class="recruiter-list">
     <mat-sidenav-content>
         <app-dialog aria-modal="true" title='title' btnLabel='btnLabel' contentHeader='contentHeader' contentBody='contentBody'
@@ -56,26 +49,47 @@
         <p><button mat-button>Recruiter</button></p>
     </mat-sidenav-content>
 </mat-sidenav-container>
-<p><button mat-button>Footer</button></p>
+<p><button mat-button>Footer</button></p> -->
 
 
-<!-- <mat-sidenav-container class="example-container">
-    <mat-sidenav-content [formGroup]="options">
-        <p>
-            <mat-checkbox formControlName="fixed">Fixed</mat-checkbox>
-        </p>
-        <p>
-            <mat-form-field>
-                <mat-label>Top gap</mat-label>
-                <input matInput type="number" formControlName="top">
-            </mat-form-field>
-        </p>
-        <p>
-            <mat-form-field>
-                <mat-label>Bottom gap</mat-label>
-                <input matInput type="number" formControlName="bottom">
-            </mat-form-field>
-        </p>
-        <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+<mat-sidenav-container class="example-container"
+    [ngClass]="{'example-container-expanded':showNav, 'example-container-collapsed':!showNav}">
+    <mat-sidenav-content>
+        <div style="float:right;">
+            <!-- <mat-icon>angle_right</mat-icon> -->
+            <!-- <mat-icon *ngIf="!showNav" (click)="showNav = !showNav">expand_more</mat-icon>
+            <mat-icon *ngIf="showNav" (click)="showNav = !showNav">expand_less</mat-icon> -->
+            <mat-icon *ngIf="!showNav" (click)="showNav = !showNav">expand_left</mat-icon>
+            <mat-icon *ngIf="showNav" (click)="showNav = !showNav">expand_right</mat-icon>
+        </div>
+        <ng-container *ngIf="showNav">
+            <app-dialog aria-modal="true" title='title' btnLabel='btnLabel' contentHeader='contentHeader'
+                contentBody='contentBody' [openDialog]="openDialog" (dialogClose)="dialogClose($event)">
+            </app-dialog>
+            <p>
+                <a routerLink="/nat-scroll"></a>
+            </p>
+            <p>
+                <button (click)="openDialog = !openDialog">toggle dialog</button>
+            </p>
+            <p>
+                <a [routerLink]="['/var']" [queryParams]="{details: true}">true details</a>
+            </p>
+
+            <p>
+                <a [routerLink]="['/stepper']">stepper component</a>
+            </p>
+            <p>
+                {{ currentDate | dateFormat }}
+            </p>
+            <p>
+                dateDiff -> {{ currentDate | dateDiff }}
+            </p>
+            <p>
+                <button mat-button>
+                    <app-template-dialog></app-template-dialog>
+                </button>
+            </p>
+        </ng-container>
     </mat-sidenav-content>
-</mat-sidenav-container> -->
+</mat-sidenav-container>

@@ -6,3 +6,25 @@
     overflow: hidden;
     background-color: #f3f1f1;
 }
+
+.example-container {
+    height: 900px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    &-expanded {
+        width: 300px;
+    }
+    &-collapsed {
+        width: 60px;
+    }
+}
+  
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-sidenav {
+    padding: 20px;
+}
