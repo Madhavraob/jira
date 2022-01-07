@@ -11,10 +11,12 @@ import { CharanAccessComponent } from './charan-access/charan-access.component';
 import { FormFieldComponent } from './form-field/form-field.component';
 import { NativeScroll2Component } from './native-scroll2/native-scroll2.component';
 import { StepperComponent } from './stepper/stepper.component';
+import { TableSortingExampleComponent } from './table-sorting-example/table-sorting-example.component';
 
 const routes: Routes = [
   { path: 'var', component: VarComponent, resolve: { message: NewsResolver } },
   { path: 'var-step', component: VarStepComponent },
+  { path: 'table', component: TableSortingExampleComponent },
   { path: 'stepper', component: StepperComponent },
   { path: 'charan', component: CharanComponent },
   { path: 'trans', component: TransComponent },

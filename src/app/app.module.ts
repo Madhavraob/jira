@@ -37,6 +37,7 @@ import { NavEffects } from './store/nav.effects';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store/reducers';
 import { StepperComponent } from './stepper/stepper.component';
+import { TableSortingExampleComponent } from './table-sorting-example/table-sorting-example.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -65,7 +66,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     FormFieldComponent,
     NativeScrollComponent,
     NativeScroll2Component,
-    StepperComponent
+    StepperComponent,
+    TableSortingExampleComponent
   ],
   imports: [
     BrowserModule,
