@@ -2,7 +2,11 @@
     {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
 </button>
 
-<mat-horizontal-stepper linear #stepper>
+<mat-vertical-stepper linear #stepper (selectionChange)="selectionChange($event)" class="steps-completed"
+    style="--count: {{stepsCompleted}};" [ngClass]="{'step1Completed': zeroFormGroup.valid,
+    'step2Completed': firstFormGroup.valid, 'step2Pending': !zeroFormGroup.valid,
+    'step3Completed': secondFormGroup.valid, 'step3Pending': !firstFormGroup.valid,
+    'step4Completed': secondFormGroup.valid, 'step4Pending': !secondFormGroup.valid}">
     <mat-step [completed]="step1Completed">
         <form [formGroup]="zeroFormGroup">
             <ng-template matStepLabel>Fill out your name</ng-template>
@@ -44,7 +48,7 @@
             </div>
         </form>
     </mat-step>
-    <mat-step>
+    <mat-step [stepControl]="secondFormGroup">
         <ng-template matStepLabel>Done</ng-template>
         <p>You are now done.</p>
         <div>
@@ -70,4 +74,15 @@
     <ng-template matStepperIcon="chat">
         <mat-icon>forum</mat-icon>
     </ng-template> -->
-</mat-horizontal-stepper>
+</mat-vertical-stepper>
+
+<div class="fill-color" style="--colo: blue;">Test</div>
+<div class="fill-color" style="--colo: green;">Test</div>
+<div class="fill-color" style="--colo: {{colo}};">Test</div>
+
+<div class="multi" style="--colo: {{colo}};">
+    <p>ooooooo</p>
+    <p>tooo</p>
+    <p>teeee</p>
+    <p>foooooo</p>
+</div>

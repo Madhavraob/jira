@@ -12,14 +12,16 @@ export class StepperComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   isEditable = true;
-  step1Completed = false;
+  step1Completed = true;
   @ViewChild('stepper') stepper: MatHorizontalStepper;
+  stepsCompleted = 3;
+  colo = 'red';
 
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.zeroFormGroup = this._formBuilder.group({
-      zeroCtrl: ['']
+      zeroCtrl: ['', Validators.required]
     });
     this.firstFormGroup = this._formBuilder.group({
       firstCtrl1: ['', Validators.required],
@@ -29,6 +31,12 @@ export class StepperComponent implements OnInit {
       secondCtrl: ['', Validators.required]
     });
     const st = this.stepper;
+  }
+
+  selectionChange(event) {
+    // debugger
+    // console.log('=========', this.stepperLine);
+    // console.log('=========', this.stepLine);
   }
 
   isNormal(index) {
