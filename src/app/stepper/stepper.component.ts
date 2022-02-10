@@ -30,7 +30,12 @@ export class StepperComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
-    const st = this.stepper;
+    // setTimeout(() => {
+    //   this.secondFormGroup.clearValidators();
+    //   this.secondFormGroup.clearAsyncValidators();
+    //   this.secondFormGroup.reset();
+    //   this.secondFormGroup.updateValueAndValidity();
+    // }, 2000);
   }
 
   selectionChange(event) {

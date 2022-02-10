@@ -65,6 +65,7 @@
             }
         }
     }
+}
     // @debug var(--count);
     // @if var(--count) == '3' {
     //     $start: 3;
@@ -86,7 +87,6 @@
             }
         }
     }
-}
 
 // @function to-number($value) {
 //     @if type-of($value) == 'number' {
