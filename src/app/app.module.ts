@@ -38,6 +38,8 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store/reducers';
 import { StepperComponent } from './stepper/stepper.component';
 import { TableSortingExampleComponent } from './table-sorting-example/table-sorting-example.component';
+import { Tab1Component } from './tab1/tab1.component';
+import { Tab2Component } from './tab2/tab2.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -67,7 +69,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NativeScrollComponent,
     NativeScroll2Component,
     StepperComponent,
-    TableSortingExampleComponent
+    TableSortingExampleComponent,
+    Tab1Component,
+    Tab2Component
   ],
   imports: [
     BrowserModule,
