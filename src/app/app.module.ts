@@ -40,6 +40,7 @@ import { StepperComponent } from './stepper/stepper.component';
 import { TableSortingExampleComponent } from './table-sorting-example/table-sorting-example.component';
 import { Tab1Component } from './tab1/tab1.component';
 import { Tab2Component } from './tab2/tab2.component';
+import { HelpComponent } from './help/help.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -71,7 +72,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     StepperComponent,
     TableSortingExampleComponent,
     Tab1Component,
-    Tab2Component
+    Tab2Component,
+    HelpComponent
   ],
   imports: [
     BrowserModule,

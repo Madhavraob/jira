@@ -2,4 +2,5 @@
 <div style="display: flex; align-items: stretch;">
     <app-recruiters style="max-width: 25%;"></app-recruiters>
     <app-interviews style="max-width: 75%;margin-left:20px;"></app-interviews>
+    <app-help *ngIf="appService.toggleHelp | async"></app-help>
 </div>

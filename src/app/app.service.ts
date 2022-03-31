@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { of, Observable } from 'rxjs';
+import { of, Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ export class AppService {
 
   public language = 'en-US';
   public dateFormat = 'MM/dd/yyyy';
+  public toggleHelp = new BehaviorSubject(false);
 
   constructor(public translate: TranslateService) {
     this.setLanguage();
