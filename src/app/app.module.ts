@@ -15,8 +15,8 @@ import { DialogComponent, DialogTemplateComponent } from './dialog/dialog.compon
 import { OverlayModule } from '@angular/cdk/overlay';
 import { DemoMaterialModule } from './mat.module';
 import { CharanModule } from './charan/charan.module';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TransComponent } from './trans/trans.component';
 import { AccessibilityComponent } from './accessibility/accessibility.component';
@@ -41,6 +41,11 @@ import { TableSortingExampleComponent } from './table-sorting-example/table-sort
 import { Tab1Component } from './tab1/tab1.component';
 import { Tab2Component } from './tab2/tab2.component';
 import { HelpComponent } from './help/help.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { AgTableComponent } from './ag-table/ag-table.component';
+import { CustomTooltip } from './ag-table/custom-tooltip.component';
+import { TotalValueRenderer } from './ag-table/total-value-renderer.component';
+import { MedalCellRenderer } from './ag-table/MedalCellRenderer';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -73,7 +78,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     TableSortingExampleComponent,
     Tab1Component,
     Tab2Component,
-    HelpComponent
+    HelpComponent,
+    AgTableComponent,
+    CustomTooltip,
+    MedalCellRenderer,
+    TotalValueRenderer
   ],
   imports: [
     BrowserModule,
@@ -95,7 +104,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     }),
     EffectsModule.forRoot([NavEffects]),
-    StoreModule.forRoot(reducers, { metaReducers })
+    StoreModule.forRoot(reducers, { metaReducers }),
+    AgGridModule.withComponents([CustomTooltip, MedalCellRenderer, TotalValueRenderer])
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
