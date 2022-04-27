@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// import { AngularFireModule } from '@angular/fire/compact';
+// import { AngularFireAnalyticsModule } from '@angular/fire/compact/analytics';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -46,6 +48,7 @@ import { AgTableComponent } from './ag-table/ag-table.component';
 import { CustomTooltip } from './ag-table/custom-tooltip.component';
 import { TotalValueRenderer } from './ag-table/total-value-renderer.component';
 import { MedalCellRenderer } from './ag-table/MedalCellRenderer';
+import { environment } from 'src/environments/environment';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -105,7 +108,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     }),
     EffectsModule.forRoot([NavEffects]),
     StoreModule.forRoot(reducers, { metaReducers }),
-    AgGridModule.withComponents([CustomTooltip, MedalCellRenderer, TotalValueRenderer])
+    AgGridModule.withComponents([CustomTooltip, MedalCellRenderer, TotalValueRenderer]),
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireAnalyticsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
