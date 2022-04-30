@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-// import { AngularFireModule } from '@angular/fire/compact';
-// import { AngularFireAnalyticsModule } from '@angular/fire/compact/analytics';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -109,8 +109,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     EffectsModule.forRoot([NavEffects]),
     StoreModule.forRoot(reducers, { metaReducers }),
     AgGridModule.withComponents([CustomTooltip, MedalCellRenderer, TotalValueRenderer]),
-    // AngularFireModule.initializeApp(environment.firebase),
-    // AngularFireAnalyticsModule
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

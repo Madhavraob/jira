@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { AngularFireAnalytics } from '@angular/fire/compact/analytics';
+import { AngularFireAnalytics } from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-root',
@@ -17,14 +17,17 @@ export class AppComponent {
     [17, 18, 19, 20]
   ];
 
-  // constructor(private fireAnalytics: AngularFireAnalytics) {}
+  constructor(private fireAnalytics: AngularFireAnalytics) {}
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.logToFirebaseAnalytics();
+   }
 
-  // logToFirebaseAnalytics() {
-  //   // https://github.com/angular/angularfire/blob/master/docs/analytics/getting-started.md
-  //   this.fireAnalytics.logEvent('app-start-event', {status: 'app started successfully'});
-  // }
+  logToFirebaseAnalytics() {
+    // https://console.firebase.google.com/project/kanbanfire-c7108/overview
+    // https://github.com/angular/angularfire/blob/master/docs/analytics/getting-started.md
+    this.fireAnalytics.logEvent('app-start-event', {status: 'app started successfully'});
+  }
 
   diagArr() {
 
