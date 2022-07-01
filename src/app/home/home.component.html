@@ -1,6 +1,5 @@
 <app-nav></app-nav>
-<div style="display: flex; align-items: stretch;">
-    <app-recruiters style="max-width: 25%;"></app-recruiters>
-    <app-interviews style="max-width: 75%;margin-left:20px;"></app-interviews>
+<div class="home-container">
+    <app-task-list></app-task-list>
     <app-help *ngIf="appService.toggleHelp | async"></app-help>
 </div>

@@ -1,5 +1,6 @@
 import { Component, Inject, Output, Input, EventEmitter } from '@angular/core';
 import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dialog',
@@ -9,19 +10,10 @@ import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA, MatDialogRef } from '@angu
 export class DialogComponent {
   @Output() dialogClose = new EventEmitter();
 
-  @Input() title: string;
-  @Input() contentHeader: string;
-  @Input() contentBody: string;
-  @Input() btnLabel: string;
   @Input() set openDialog(open: boolean) {
     if (open) {
       const dialogConfig = new MatDialogConfig();
-      dialogConfig.data = {
-        title: this.title, btnLabel: this.btnLabel,
-        contentHeader: this.contentHeader, contentBody: this.contentBody
-      };
       dialogConfig.panelClass = 'custom-modalbox';
- 
       this.dialogRef = this.dialog.open(DialogTemplateComponent, dialogConfig);
 
       this.dialogRef.afterClosed().subscribe(response => {
@@ -42,20 +34,54 @@ export class DialogComponent {
 })
 export class DialogTemplateComponent {
 
-  submitted = false;
   data: any;
-
+  public createTaskForm: FormGroup;
+  public labelOptions = [
+    { label: 'CP', pallet: 'blue' },
+    { label: 'Fault', pallet: 'red' }
+  ];
+  public statusOptions = [
+    { status: 'toDo', name: 'To Do' },
+    { status: 'development', name: 'Development' },
+    { status: 'testing', name: 'Testing' },
+    { status: 'done', name: 'Done' }
+  ];
+  public newTask = {
+    name: '',
+    comments: [],
+    checklistItems: [],
+    votes: [],
+    labels: [],
+    status: ''
+  };
   constructor(public dialogRef: MatDialogRef<DialogTemplateComponent>
-    , @Inject(MAT_DIALOG_DATA) data) {
+    , @Inject(MAT_DIALOG_DATA) data, private formBuilder: FormBuilder) {
     this.data = data;
+    this.createTaskForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      status: ['', [Validators.required]],
+      labels: ['', [Validators.required]]
+    })
+  }
+
+  onStatusSelection(status) {
+    this.newTask.status = status;
+    this.createTaskForm.get('status').setValue(status);
+  }
+
+  onLabelSelection(label) {
+    this.newTask.labels = [label];
+    this.createTaskForm.get('labels').setValue(label.label);
   }
 
   onSubmit() {
-    this.submitted = true;
-    this.dialogRef.close(this.submitted);
+    if (this.createTaskForm.valid) {
+      this.newTask.name = this.createTaskForm.value.name;
+      this.dialogRef.close(this.newTask);
+    }
   }
 
   onCancel() {
-    this.dialogRef.close(this.submitted);
+    this.dialogRef.close();
   }
 }
